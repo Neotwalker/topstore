@@ -1,0 +1,950 @@
+@import "vars"
+
+/*==========  Desktop First  ==========*/
+
+/* Large Devices, Wide Screens */
+@media only screen and (max-width : 1390px)
+	.promotion
+		.h2
+			&::after
+				right: 2%
+				top: -12%
+
+/* Large Devices, Wide Screens */
+@media only screen and (max-width : 1200px)
+	.h2
+		font-size: 49px !important
+	.button
+		font-size: 16px !important
+	.arrows
+		.owl-next,
+		.owl-prev
+			width: 49px
+			height: 49px
+	.header
+		&--wrapper
+			justify-content: space-between
+			padding: 0
+			border: none
+			background: transparent
+			margin-top: 0
+			.right
+				position: absolute
+				width: 100vw
+				height: 100vh
+				opacity: 0
+				visibility: hidden
+				right: 0
+				top: 0
+				transition: right .5s ease, opacity .2s ease, visibility .1s ease
+				&.open
+					display: flex !important
+					opacity: 1
+					visibility: visible
+					top: 0
+					right: 0
+					transition: right .5s ease, opacity .2s ease, visibility .1s ease
+					background-color: rgba(0,0,0,.45)
+					.right--menu
+						overflow: auto
+						transform: translateZ(0)
+						transition: all .3s ease
+						right: 0
+				.background-menu
+					height: 100%
+					left: 0
+					position: absolute
+					top: 0
+					width: 100%
+					z-index: 1
+				&--menu
+					transition: right 1s ease, opacity 5s ease, visibility 5s ease
+					top: 70px
+					right: -100%
+					z-index: 2
+					position: absolute
+					background-color: #f9f9f9
+					max-width: fit-content
+					border-top-left-radius: 84px
+					height: 100%
+					flex-direction: column
+					padding: 20px 35px
+					.social
+						padding-left: 0
+					.button
+						margin-left: 0
+					.menu
+						.list
+							flex-direction: column
+							display: flex
+							padding-left: 0
+			.burger
+				z-index: 999
+				border-radius: 10px
+				display: flex
+				gap: 5px
+				height: 40px
+				transition: all .3s ease
+				width: 40px
+				background: $white
+				border: 1px solid #EDEDED
+				border-radius: 50%
+				.wrapper
+					height: 20px
+					margin: auto
+					overflow: hidden
+					position: relative
+					width: 20px
+					span
+						background-color: $black
+						height: 2px
+						left: 50%
+						position: absolute
+						top: 45%
+						transform: translate(-50%,-50%)
+						transition: all .3s ease
+						width: 20px
+						&:nth-of-type(2)
+							top: calc(50% + 3px)
+							width: 15px
+							right: 0
+							left: initial
+							transform: translate(0)
+				&.open
+					span
+						&:first-child
+							top: 50%
+							transform: translate(-50%) rotate(45deg)
+						&:nth-of-type(2)
+							top: 50%
+							transform: translate(-50%) rotate(-45deg)
+							width: 20px
+							left: 10px
+	.s
+		&--header
+			padding-top: 80px
+			padding-bottom: 60px
+			.h1
+				font-size: 49px
+			&__wrapper
+				.main--image
+					width: 590px
+				.buttons
+					margin-top: 54px
+					.button
+						font-size: 16px
+		&--advantages
+			height: 1035px
+	.advantages
+		&--list
+			.item
+				.title
+					font-size: 49px
+				.subtitle
+					font-size: 20px
+				.info
+					font-size: 14px
+	.video
+		height: 500px
+		&--wrapper
+			.lazyYT
+				height: 505px
+	.services
+		padding-bottom: 60px
+		&--wrapper
+			margin-bottom: 62px
+			.text
+				.h3
+					font-size: 20px !important
+					&::before
+						width: 260px
+				.list
+					li
+						font-size: 14px
+						padding-bottom: 10px
+						margin-bottom: 10px
+						align-items: center
+						&:first-child
+							padding-top: 10px
+		&--list
+			.title
+				padding-bottom: 23px
+				.h3
+					font-size: 29px
+			.carousel 
+				.item
+					gap: 20px
+					min-height: 480px
+					.h4
+						font-size: 20px
+					.icon
+						width: 55px
+						height: 55px
+					&--list
+						li
+							font-size: 12px
+	.why
+		padding-bottom: 50px
+		&::after
+			background-image: url(../img/3d_arrow.png)
+			content: ""
+			display: block
+			height: 134px
+			position: absolute
+			right: 20%
+			bottom: -8%
+			width: 134px
+		&--wrapper
+			.title
+				justify-content: flex-start
+				.button
+					margin-top: auto
+				.image
+					&::before
+						width: 136px
+						height: 225px
+						top: -90%
+					img
+						max-height: 293px
+				.h2
+					span
+						&:first-child
+							font-size: 49px
+						&:last-child
+							font-size: 29px
+							max-width: 310px
+			.list
+				li
+					span
+						font-size: 49px
+					p
+						font-size: 14px
+	.promotion
+		&--icon
+			width: fit-content
+			max-width: 307px
+			height: 367px
+			top: 26%
+			img
+				height: 100%
+		.h2
+			max-width: 750px
+			&::after
+				display: none
+		&--wrapper
+			gap: 15px
+			.h3
+				font-size: 29px
+				margin-bottom: 40px
+			.list
+				.item
+					.texts
+						span
+							width: 35px
+							height: 35px
+							margin-bottom: 35px
+						.h4
+							font-size: 29px
+						p
+							font-size: 14px
+			.info
+				font-size: 16px
+				.icon
+					margin-bottom: 40px
+				.text
+					margin-bottom: 50px
+				.buttons 
+					.button
+						&--white
+							span
+								margin-left: 25px
+							&::after
+								margin-right: 25px
+	.reviews
+		padding-bottom: 60px
+		.h2
+			font-size: 29px !important
+			padding-bottom: 23px
+			margin-bottom: 30px
+		&--carousel
+			.item
+				.texts
+					max-width: 650px
+					.text
+						font-size: 16px
+	.partners
+		padding-bottom: 60px
+		margin-bottom: 60px
+		.title
+			padding-bottom: 23px
+			margin-bottom: 30px
+			.h2
+				font-size: 29px !important
+		&--carousel
+			.item
+				padding: 22px 21px
+				&--title
+					.fio
+						span
+							&:first-child
+								font-size: 20px
+							&:last-child
+								font-size: 15px
+				.text p
+					font-size: 16px
+	.faq
+		.h2
+			font-size: 29px !important
+			margin-bottom: 30px
+		&--item
+			.title
+				.icon::after
+					width: 40px
+					height: 40px
+					font-size: 39px
+				.h3
+					font-size: 20px
+			&__text
+				margin-top: 20px
+				padding-top: 10px
+				p
+					font-size: 14px
+		&--text
+			padding-top: 35px
+			padding-bottom: 35px
+			padding-right: 40px
+			max-width: 45%
+			.h3
+				font-size: 29px
+				max-width: 400px
+				margin-bottom: 20px
+		&--banner
+			margin-bottom: 60px
+			.image
+				max-height: 250px
+				width: 50%
+				.consultation
+					width: 370px
+				.cube
+					&-1
+						width: 500px
+						bottom: -70px
+					&-2
+						width: 250px
+	.form
+		padding-bottom: 35px
+		padding-top: 100px
+		&--list
+			.h2
+				margin-bottom: 12px
+			.h3
+				font-size: 29px
+				margin-bottom: 40px
+			form
+				max-width: 485px
+				input
+					font-size: 20px
+					margin-bottom: 20px
+					padding-bottom: 10px
+				button
+					max-width: 270px
+	.footer 
+		.wrapper
+			flex-wrap: wrap
+			align-items: flex-start
+		&--info
+			.chat:nth-child(2)
+				margin-left: auto
+			&.right
+				align-items: center
+				.chat.copyright
+					padding: 11px 31px
+
+/* Medium Devices, Desktops */
+@media only screen and (max-width : 992px)
+	.form
+		&--image
+			max-width: 276px
+	.s
+		&--header
+			&__wrapper
+				.main--image
+					max-width: 550px
+					right: -22%
+				.block
+					&--wrapper
+						.image
+							max-width: 198px
+						.info
+							max-width: 210px
+							p
+								font-size: 15px
+	.row
+		margin-left: 0
+		margin-right: 0
+	.video
+		&--wrapper
+			.lazyYT
+				height: 457px
+				padding-bottom: 67% !important
+	.why
+		&--wrapper
+			.list
+				max-width: 423px
+				flex: 1 1 55%
+		&::after
+			height: 80px
+			width: 80px
+			background-size: contain
+			bottom: -5%
+	.promotion
+		.h2
+			margin-bottom: 50px
+		&--wrapper
+			margin-bottom: 60px
+			.info
+				// max-width: 360px
+		&::before
+			width: 171px
+			height: 200px
+	.reviews
+		&--carousel
+			.item
+				.title
+					max-width: 260px
+				.texts
+					max-width: 555px
+	.services
+		&--list 
+			.carousel 
+				.item
+					width: 271px
+	.faq
+		&--banner
+			.image
+				width: 50%
+				min-height: 100%
+				max-height: fit-content
+				.consultation
+					width: 100%
+					min-height: 100%
+		&--text
+			width: 50%
+			padding: 20px
+			padding-left: 0
+	.footer
+		&--info
+			.logo
+				margin-right: 0
+
+/* Small Devices, Tablets */
+@media only screen and (max-width : 768px)
+	.s
+		&--advantages
+			height: fit-content
+		&--header
+			padding-bottom: 50px
+			padding-top: 100px
+			overflow: hidden
+			&__wrapper
+				width: 736px
+				align-items: flex-start
+				.h1
+					max-width: 50%
+				.main--image
+					right: -31%
+					width: 70%
+	.services
+		padding-top: 40px
+		&--wrapper
+			flex-direction: column
+			gap: 20px
+			.image
+				width: 100%
+				img
+					width: 100%
+					border-top-right-radius: 20px
+					border-top-left-radius: 20px
+					border-bottom-left-radius: 0
+			.text
+				padding: 20px
+				padding-top: 10px
+				padding-bottom: 33px
+	.video
+		height: fit-content
+		&--wrapper
+			margin-bottom: 30px
+			.lazyYT
+				padding-bottom: 100% !important
+	.advantages
+		&--list
+			&::after
+				right: -10%
+	.why
+		&--wrapper
+			gap: 30px
+			.title
+				flex: 1 1 calc(50% - 30px)
+			.list
+				flex: 1 1 calc(50% - 30px)
+				padding-left: 0
+	.promotion
+		&--wrapper
+			flex-direction: column
+			margin-bottom: 30px
+			.h3
+				margin-bottom: 0
+			.list
+				flex: 1 1 100%
+				max-width: 100%
+				margin-bottom: 30px
+			.info
+				max-width: 100%
+				flex: 1 1 100%
+				.icon
+					margin-bottom: 10px
+				.text
+					margin-bottom: 30px
+	.reviews
+		.wrapper .arrows
+			bottom: 0
+		&--carousel
+			.item
+				.title
+					max-width: 260px
+				.texts
+					max-width: 455px
+					padding: 20px
+	.faq
+		&--text
+			padding-bottom: 20px
+			padding-right: 20px
+			padding-top: 20px
+			max-width: 60%
+			z-index: 1
+		&--banner
+			background-image: url(../img/tablet_banner.png)
+			background-size: 90% 100%
+			background-repeat: no-repeat
+			.image
+				max-width: 40%
+				width: fit-content
+				.consultation, .cube
+					display: none
+					height: 100%
+				.cube
+					&-1
+						width: 360px
+					&-2
+						width: 200px
+	.footer
+		&--wrapper
+			justify-content: center
+		&--info
+			flex-direction: column
+			justify-content: center
+			.chat
+				&:nth-child(2)
+					margin-left: 0
+			&.right
+				.chat
+					&.politic, &.copyright
+						padding: 22px 17px
+						align-items: center
+						justify-content: center
+
+@media only screen and (max-width : 670px)
+	.header
+		background-color: $white
+		&--wrapper
+			.burger
+				border: none
+				border-radius: 0
+				.wrapper
+					width: 28px
+					height: 28px
+					span
+						width: 28px
+						&:nth-of-type(2)
+							width: 21px
+				&.open
+					border-radius: 50%
+					span:nth-of-type(2)
+						left: 14px
+						width: 28px
+	.s
+		&--header
+			border-bottom-left-radius: 20px
+			border-bottom-right-radius: 20px
+	.advantages
+		border-bottom-left-radius: 20px
+		border-bottom-right-radius: 20px
+		&--list
+			&::after
+				bottom: -22%
+			.item
+				flex: 1 1 calc(50% - 32px)
+				max-width: calc(50% - 32px)
+	.video, .services, .why, .promotion, .promotion:after, .partners, .faq, .form
+		border-bottom-left-radius: 20px
+		border-bottom-right-radius: 20px
+	.why
+		&::after
+			display: none
+		padding-bottom: 138px
+		&--wrapper
+			flex-direction: column
+			position: relative
+			.title
+				gap: 0
+				.h2
+					margin-bottom: 0
+					span:last-child
+						max-width: 320px
+				.image 
+					&::before
+						top: -200px
+					img
+						display: none
+				.button
+					position: absolute
+					bottom: -100px
+					width: 100%
+			.list
+				max-width: 100%
+	.reviews
+		padding-bottom: 40px
+		&--carousel
+			.item
+				flex-direction: column
+				.title
+					margin-bottom: 20px
+					.icon
+						margin-bottom: 20px
+				.title, .texts
+					max-width: 100%
+		.wrapper .arrows
+			bottom: auto
+			top: 0
+			right: 0
+			padding-right: 0
+			padding-left: 20px
+			border-bottom-right-radius: 0
+			border-top-right-radius: 0
+			border-bottom-left-radius: 24px
+			border-top-left-radius: 24px
+	.partners
+		padding-bottom: 50px
+		margin-bottom: 30px
+	.faq
+		&--banner
+			flex-direction: column
+			background-image: none
+			margin-bottom: 50px
+			.image
+				max-width: 100%
+				width: 100%
+				.mobile
+					display: block
+		&--text
+			max-width: 100%
+			width: 100%
+			padding: 22px
+			.h3
+				margin: 0 auto 20px
+			.button
+				margin: 0 auto
+				max-width: 400px
+	.form
+		&--list
+			flex: 100%
+			max-width: 100%
+			form
+				max-width: 100%
+		&--image
+			display: none
+	.promotion
+		padding-top: 145px
+		&::before
+			right: 0
+			left: 0
+			margin: auto
+			top: -7.5%
+			background-image: url('../img/spiral_mobile.png')
+			height: 400px
+			width: 400px
+
+/* Extra Small Devices, Phones */
+@media only screen and (max-width : 480px)
+	.h2
+		font-size: 40px !important
+	.arrows
+		gap: 15px
+		.owl-next,
+		.owl-prev
+			width: 46px
+			height: 46px
+	.button
+		font-weight: 600
+	.s
+		&--header
+			padding-bottom: 0
+			overflow: hidden
+			.h1
+				font-size: 40px
+				span
+					&:last-child
+						align-items: center
+					.top
+						&::after
+							bottom: -10px
+			.container
+				padding: 0
+				margin: 0
+				width: 100%
+			&__wrapper
+				width: 100%
+				flex-direction: column
+				align-items: center
+				.block
+					padding-left: 15px
+					padding-right: 15px
+					&--wrapper
+						.image
+							display: none
+						.info
+							max-width: 100%
+							width: 100%
+							p
+								max-width: 286px
+								margin: 0
+								br
+									display: none
+				.main--image
+					background-image: url(../img/main_img1.png)
+					position: inherit
+					max-width: 768px
+					width: 100%
+					height: 400px
+					background-size: cover
+					background-repeat: no-repeat
+					background-position: center top
+					img
+						display: none
+				.buttons
+					margin-top: 25px
+					.button
+						max-width: 100%
+					.arrow--bottom
+						display: none
+	.video
+		&--wrapper
+			.lazyYT
+				padding-bottom: 155% !important
+				height: 515px
+	.advantages
+		&--list
+			.item
+				.title
+					font-size: 40px
+					display: flex
+					align-items: center
+					gap: 7px
+					margin-left: -4px
+					img
+						width: 25px
+						height: 25px
+				.subtitle
+					font-size: 18px
+				.info
+					font-size: 12px
+			&::after
+				width: 200px
+				height: 200px
+	.services
+		padding-bottom: 40px
+	.why
+		padding-top: 35px
+		&--wrapper
+			.title
+				.image::before
+					top: -185px
+			.list
+				li
+					line-height: 1
+					span
+						margin-bottom: 8px
+						display: inline-block
+					&:first-child
+						padding-top: 20px
+					p
+						line-height: 1.6
+	.promotion
+		.h2
+			margin-bottom: 35px
+		&--wrapper
+			.list
+				.item
+					padding-left: 25px
+			.info
+				.buttons
+					.button
+						&--white
+							span
+								margin-left: 24px
+							&::after
+								margin-right: 20px
+		&--icon
+			top: 71%
+	.reviews
+		padding-top: 120px
+		.wrapper
+			.arrows
+				padding-top: 10px
+	.partners
+		.title
+			padding-bottom: 11px
+	.faq
+		&--list
+			gap: 10px
+			margin-bottom: 15px
+		&--item
+			padding: 18px
+			&__text
+				margin-top: 12px
+				padding-top: 8px
+				p
+					margin: 0
+					margin-bottom: 20px
+					&:last-child
+						margin-bottom: 0
+		&--text
+			.h3
+				img
+					display: none
+			.button
+				span
+					display: none
+	.form
+		padding-bottom: 50px
+		&--list
+			.h2
+				margin-bottom: 0
+			form
+				label
+					font-size: 20px
+	.footer
+		padding-top: 90px
+
+
+@media only screen and (max-width : 370px)
+	.h2
+		font-size: 26px !important
+	.h3
+		font-size: 20px !important
+	.video
+		&--wrapper
+			.lazyYT
+				padding-bottom: 155% !important
+				height: 450px
+	.s
+		&--header
+			.h1
+				span
+					font-size: 29px
+			&__wrapper
+				.main--image
+					background-position: bottom
+					max-width: 100%
+					background-size: cover
+					height: 320px
+	.advantages
+		&--list
+			.item
+				max-width: calc(50% - 10px)
+				.title
+					font-size: 29px
+				.subtitle
+					font-size: 16px
+			&::after
+				width: 150px
+				height: 150px
+				bottom: -13%
+	.video
+		&--wrapper
+			.lazyYT
+				.html5-info-bar
+					padding: 15px
+	.services
+		&--wrapper
+			.text
+				.list
+					li
+						display: block
+						flex-wrap: wrap
+						padding-left: 30px
+						white-space: break-spaces
+						&::before
+							width: 20px
+							height: 20px
+	.promotion
+		&--wrapper
+			.list
+				.item
+					padding-right: 25px
+					.texts
+						z-index: 1
+						.h4
+							font-size: 20px
+						span
+							margin-bottom: 10px
+					.image
+						display: none
+			.info
+				.buttons
+					.button
+						&--white
+							span
+								font-size: 11px
+
+/* Custom, iPhone Retina */
+@media only screen and (max-width : 320px)
+	.advantages
+		&--list
+			.item
+				flex: 1 1 calc(100% - 32px)
+				max-width: 100%
+			&::after
+				display: none
+
+/*==========  Mobile First  ==========*/
+
+/* Custom, iPhone Retina */
+@media only screen and (min-width : 320px)
+	/**/
+
+
+/* Extra Small Devices, Phones */
+@media only screen and (min-width : 480px)
+	/**/
+
+
+/* Small Devices, Tablets */
+@media only screen and (min-width : 768px)
+	.container
+		max-width: 850px
+		width: 100%
+
+
+/* Medium Devices, Desktops */
+@media only screen and (min-width : 992px)
+	.container
+		max-width: 970px
+		width: 100%
+
+
+/* Large Devices, Wide Screens */
+@media only screen and (min-width : 1200px)
+	.container
+		max-width: 1170px
+
